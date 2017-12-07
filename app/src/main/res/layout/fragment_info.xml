@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:showDividers="middle"
+        >
+
+        <TextView
+            style="@style/TextViewHeader"
+            android:text="@string/id"
+            />
+
+        <TextView
+            android:id="@+id/id"
+            style="@style/TextViewValue"
+            tools:text="1"
+            />
+
+        <TextView
+            style="@style/TextViewHeader"
+            android:text="@string/name"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/TextViewValue"
+            tools:text="Almaty"
+            />
+
+        <TextView
+            style="@style/TextViewHeader"
+            android:text="@string/country"
+            />
+
+        <TextView
+            android:id="@+id/country"
+            style="@style/TextViewValue"
+            tools:text="KZ"
+            />
+
+        <TextView
+            style="@style/TextViewHeader"
+            android:text="@string/longitude"
+            />
+
+        <TextView
+            android:id="@+id/longitude"
+            style="@style/TextViewValue"
+            tools:text="48.12321"
+            />
+
+        <TextView
+            style="@style/TextViewHeader"
+            android:text="@string/latitude"
+            />
+
+        <TextView
+            android:id="@+id/latitude"
+            style="@style/TextViewValue"
+            tools:text="48.12321"
+            />
+
+    </LinearLayout>
+
+
+
+</ScrollView>

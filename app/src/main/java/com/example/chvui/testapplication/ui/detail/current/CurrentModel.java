@@ -2,9 +2,7 @@ package com.example.chvui.testapplication.ui.detail.current;
 
 import com.example.chvui.testapplication.data.model.CurrentWeather;
 
-import java.io.IOException;
-
-import retrofit2.Call;
+import io.reactivex.Single;
 
 /**
  * Created by chvui on 07.12.2017.
@@ -12,5 +10,5 @@ import retrofit2.Call;
 
 public interface CurrentModel {
 
-    Call<CurrentWeather> geCurrentWeatherConditionsInCity(int id) throws IOException;
+    Single<CurrentWeather> geCurrentWeatherConditionsInCity(int id);
 }

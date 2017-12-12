@@ -2,9 +2,7 @@ package com.example.chvui.testapplication.ui.detail.forecast;
 
 import com.example.chvui.testapplication.data.model.FiveDayForecast;
 
-import java.io.IOException;
-
-import retrofit2.Call;
+import io.reactivex.Single;
 
 /**
  * Created by chvui on 07.12.2017.
@@ -12,5 +10,5 @@ import retrofit2.Call;
 
 public interface ForecastModel {
 
-    Call<FiveDayForecast> getFiveDayForecastByCityId(int id) throws IOException;
+    Single<FiveDayForecast> getFiveDayForecastByCityId(int id);
 }

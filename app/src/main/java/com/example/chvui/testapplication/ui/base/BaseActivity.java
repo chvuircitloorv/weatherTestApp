@@ -63,13 +63,17 @@ public abstract class BaseActivity extends AppCompatActivity implements View {
 
     @Override
     public void showLoading() {
-        hideLoading();
-        mProgressDialog = CommonUtils.showLoadingDialog(this);
+        if (mProgressDialog == null) {
+            mProgressDialog = CommonUtils.showLoadingDialog(this);
+        }
+        if (!mProgressDialog.isShowing()) {
+            mProgressDialog.show();
+        }
     }
 
     @Override
     public void hideLoading() {
-        if (mProgressDialog != null && mProgressDialog.isShowing()) {
+        if (mProgressDialog != null) {
             mProgressDialog.cancel();
         }
     }

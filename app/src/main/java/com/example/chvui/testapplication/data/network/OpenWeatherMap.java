@@ -3,6 +3,11 @@ package com.example.chvui.testapplication.data.network;
 import com.example.chvui.testapplication.data.model.CurrentWeather;
 import com.example.chvui.testapplication.data.model.FiveDayForecast;
 
+import javax.inject.Inject;
+
+import io.reactivex.Observable;
+import io.reactivex.Single;
+import io.reactivex.SingleObserver;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -17,8 +22,8 @@ public interface OpenWeatherMap {
     String IMAGE_URL = "http://openweathermap.org/img/w/";
 
     @GET("data/2.5/weather")
-    Call<CurrentWeather> getCurrentWeatherByCityId(@Query("id") String id, @Query("APPID") String key);
+    Single<CurrentWeather> getCurrentWeatherByCityId(@Query("id") String id, @Query("APPID") String key);
 
     @GET("/data/2.5/forecast")
-    Call<FiveDayForecast> getFiveDayForecastByCityId(@Query("id") String id, @Query("APPID") String key);
+    Single<FiveDayForecast> getFiveDayForecastByCityId(@Query("id") String id, @Query("APPID") String key);
 }

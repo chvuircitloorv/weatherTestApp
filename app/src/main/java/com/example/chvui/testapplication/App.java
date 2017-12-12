@@ -12,6 +12,8 @@ import com.example.chvui.testapplication.di.module.ApplicationModule;
 
 public class App extends Application {
 
+    public static String APP_TAG = "app";
+
     private ApplicationComponent mApplicationComponent;
 
     @Override
@@ -25,4 +27,5 @@ public class App extends Application {
     public ApplicationComponent getComponent() {
         return mApplicationComponent;
     }
+
 }
